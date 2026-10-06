@@ -1,0 +1,31 @@
+h2{
+  background-color: lightgray;
+}
+
+h3{
+  background-color: lightpink;
+}
+
+#id-one{
+  background-color: lightblue;
+}
+
+#id-two{
+  background-color: lightsalmon;
+}
+
+#id-three{
+  background-color: red;
+}
+
+#class-one{
+  background-color: yellow;
+}
+
+.class-one{
+  background-color: yellow;
+}
+
+#class-two{
+  background-color: green;
+}

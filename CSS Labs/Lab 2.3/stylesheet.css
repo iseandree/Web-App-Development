@@ -1,0 +1,30 @@
+li:hover
+{
+  background-color: gold;
+}
+
+input:focus{
+  background-color: powderblue;
+}
+
+.btn:hover{
+  background-color: lightgreen;
+}
+
+section:hover{
+  background-color: linen;
+}
+
+section::before{
+  min-height: 25px;
+  background-color: cornflowerblue;
+  display: block;
+  content: ' ';
+}
+
+nav::before{
+  min-height: 25px;
+  background-color: cornflowerblue;
+  display: block;
+  content: ' ';
+}

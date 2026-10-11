@@ -1,0 +1,80 @@
+
+html, body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+div {
+  padding: 1.0em;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+/* Table Styles */
+
+tr {
+  padding: 2em;
+}
+
+td {
+  padding: 1.5em;
+  font-size: 1.2em;
+}
+
+thead {
+  font-size: 2em;
+  background-color: #cccccc;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableStriped {
+  border-collapse: collapse;
+  border: 1px, solid, grey;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.out::after {
+  background-color: rgba(255, 0, 0, 0.4);
+  content: 'We\'re out!';
+  display: block;
+  padding: inherit;
+}
+
+.low::after {
+  background-color: rgba(255, 0, 0, 0.4);
+  content: 'Oh no! Running low.';
+  display: block;
+  padding: inherit;
+}
+
+.plenty::after {
+  background-color: rgba(0, 128, 0, 0.4);
+  content: 'We have plenty.';
+  display: block;
+  padding: inherit;
+}
+
+/* List Styles */
+
+ul {
+  list-style-type: square;
+  list-style-image: url("images/bullet_green.png");
+  list-style-position: inside;
+  line-height: 2.8em;
+  font-size: 1.5em;
+  padding: 1.0em;
+}
+
+li {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 0, 0.4);
+}
+

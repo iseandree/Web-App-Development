@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, training, lessons, templates">
+    <meta lang="en-US">    
+    <title>2_x Lab: Module 2: Images</title>
+    <style>
+        html, body {
+            /* Clear inherited margin. */
+            margin: 0;
+            /* Clear inherited padding. */
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(12, 12, 12);
+            color: gray;
+        }
+    
+        /* Clear inherited element styles. */
+        h1, h2, div, ul, label, img, li {
+            margin: 0;
+            padding: 0;
+        }
+    
+        .logoandlinks {
+            padding-top: 1.2em;
+            padding-right: 1.4em;
+            padding-bottom: 1.0em;
+            padding-left: 1.6em;
+            color: rgb(98, 0, 0);
+            font-size: 1.5em;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 20%;
+            white-space: nowrap;
+        }
+    
+        .logocircle {
+            background-color: darkred;
+            color: white;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            padding: .4em
+        }
+    
+        .bannerlinks {
+            float: right;
+            position: absolute;
+            right: 8.0em;
+        }
+    
+        .bannerlinks a {
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 1.1em;
+            color: black;
+        }
+    
+        .bannerlinks a:hover {
+            color: rgb(194, 1, 1);
+            border-radius: 8px;
+        }
+    
+        .highlight {
+            color: rgb(0, 0, 0);
+            width: 100%;
+            height: 100vh;
+            font-weight: bold;
+            font-size: 1.2em;
+            background: url("images/pexels-asad-photo-maldives-2549018.jpg") no-repeat fixed center;
+            background-size: cover;
+        }
+    
+    
+        input {
+            width: 100%;
+            height: 34px;
+            color: rgb(0, 0, 0);
+            border-radius: 3px;
+            font-size: 1.2em;
+            padding: 5px 5px 5px 10px;
+            background-color: rgba(255, 255, 255, .7);
+            border: none;
+            outline: none;
+        }
+    
+        input:focus {
+            color: rgb(0, 0, 0);
+            background-color: rgb(144, 211, 238);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 0.6em;
+        }
+    
+        .topbanner {
+            background-color: white;
+            width: 100%;
+            height: 80px;
+            border-bottom: 12px solid rgb(138, 0, 0);
+        }
+    
+        .outer {
+            width: 100%;
+            margin-top: 7.0em;
+            margin-left: 10%;
+            display: inline-block;
+        }
+    
+        .collectinfo {
+            min-width: 350px;
+            min-height: 300px;
+            border-radius: 8px;
+            background-color: rgba(245, 245, 245, 0.897);
+            padding-top: 2.5em;
+            padding-right: 1.6em;
+            padding-bottom: 0.8em;
+            padding-left: 1.1em;
+            margin-right: 8.8em;
+            display: inline-block;
+    
+        }
+    
+        .ammenitiesinfo {
+            min-width: 350px;
+            max-width: 350px;
+            min-height: 300px;
+            border-radius: 8px;
+            background-color: rgba(245, 245, 245, 0.897);
+            margin-top: 5px;
+            padding-top: 2.5em;
+            padding-left: 1.1em;
+            display: inline-block;
+            vertical-align: top;
+        }
+    
+        .ammenitiesinfo li {
+            list-style: none;
+            margin-bottom: 1.2em;
+            min-height: 70px;
+        }
+    
+        li img {
+            margin-right: 0.5em;
+            border-radius: 5px;
+        }
+    
+        .button1 {
+            color: rgb(255, 255, 255);
+            background-color: rgb(158, 3, 3);
+            border: none;
+            outline: black;
+            margin: 6px;
+            margin-top: 10px;
+            width: 100%;
+        }
+    
+        .rounded {
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 20px;
+            margin-bottom: 1em;
+        }
+    
+        .rounded:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(98, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbanner">
+        <div class="logoandlinks">
+            <span class="logocircle">&nbsp;E&nbsp;</span>xquisite Resorts            
+            <span class="bannerlinks">
+                <a href="">Trips</a> <a href="">Deals</a> <a href="">Contact Us</a>
+            </span>
+        </div>
+    </div>
+    <div class="highlight">
+        <div class="outer">
+        <div class="collectinfo">
+            <form action="">
+                <label for="checkin">Check in:</label>
+                <input type="date" id="checkin" name="checkin"><br><br>
+                <label for="checkout">Check out:</label>
+                <input type="date" id="checkout" name="checkout"><br><br>
+                <button class="rounded button1">Book Now</button>
+            </form>
+        </div>
+        <div class="ammenitiesinfo">
+            <ul>
+                <li><img src="images/pexels-engin-akyurt-2736387.jpg" style="width:110px;float:left;" /><div style="display:inline-block">Dining</div><div style="font-weight:lighter;font-size:smaller;">Lorem ipsum dolor sit amet consectetur adipisicing elit...</div></li>
+                <li><img src="images/pexels-asad-photo-maldives-169198.jpg" style="width:110px;float:left;"/><div style="display:inline-block">Events</div><div style="font-weight:lighter;font-size:smaller;">Lorem ipsum, dolor sit amet consectetur adipisicing elit...</div></li>
+                <li><img src="images/pexels-nitin-dhumal-46712.jpg" style="width:110px;float:left;"/><div style="display:inline-block">Activities</div><div style="font-weight:lighter;font-size:smaller;">Lorem ipsum dolor sit amet consectetur adipisicing elit...</div></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    
+</body>
+
+</html>

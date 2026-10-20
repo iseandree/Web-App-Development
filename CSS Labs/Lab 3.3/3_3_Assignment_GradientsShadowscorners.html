@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, training, lessons, templates">
+    <meta lang="en-US">
+    <title>3.3 Gradients Shadows & Corners</title>
+    <style>
+
+        .flexbox-row{
+            display: flex;
+            justify-content: center;
+        }
+
+        .common-props{
+            width: 250px;
+            height: 250px;
+            background-color: lightgray;
+            border: 2px solid black;
+            margin: 20px;
+            text-align: center;
+            color: white;
+            font-size: 2em;;
+        }
+
+        .btn-props{
+            width: 150px;
+            height: 50px;
+            margin: 20px;
+            padding: 0px 5px;
+            color: white;
+            font-size: 17px;
+            border: 2px solid black;;
+        }
+
+        .green-to-blue{
+            background-image: linear-gradient(to right, #16c406, #0e649e);
+        }
+
+        .blue-to-red{
+            background-image: linear-gradient(to right, #0e649e, #9c1010);
+        }
+
+        .red-to-orange{
+            background-image: linear-gradient(to right, #9c1010, #e24000);
+        }
+
+        .darkblue-to-lightblue{
+            background-image: linear-gradient(to bottom right, #0548da , #52acff);
+        }
+
+        .darkblue-to-lightblue-reverse{
+            background-image: linear-gradient(to top left, #0548da , #52acff);
+        }
+
+        .soft-shadow{
+            box-shadow: 8px 8px 8px rgb(90, 90, 90);
+        }
+
+        .round-corner{
+            border-radius: 25px;
+        }
+
+        /* border-image property is not compatible with border-radius */
+        .border-gradient{
+            border-width: 8px;
+            border-style: solid;
+            border-image: linear-gradient(to right, red, purple);
+            border-image-slice: 1;
+            box-shadow: -8px -8px 10px #813f3f;
+        }
+        p{
+            padding: 1em;
+            padding: 2rem;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <section id="div-elements" class="flexbox-row">
+        <div class="common-props green-to-blue soft-shadow"> Div1 </div>
+        <div class="common-props blue-to-red soft-shadow"> Div2</div>
+        <div class="common-props red-to-orange soft-shadow"> Div3</div>
+    </section>
+
+    <section id="button-elements" class="flexbox-row">
+        <button class="btn-props darkblue-to-lightblue soft-shadow round-corner">Button1</button>
+        <button class="btn-props darkblue-to-lightblue-reverse soft-shadow round-corner">Button2</button>
+        <button class="btn-props soft-shadow red-to-orange">Button3</button>
+    </section>
+
+    <section id="border-gradient-example" class="flexbox-row">
+        <p class="border-gradient">Hello World</p>
+    </section>
+
+</body>
+
+</html>

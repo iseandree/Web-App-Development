@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="html, training, lessons, templates">
+  <meta lang="en-US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Cabin&family=Yanone+Kaffeesatz:wght@400;500&display=swap"
+    rel="stylesheet">
+  <title>4.3 Media Query</title>
+  <style>
+
+    /* Pre-Written CSS. Does not need to be editted. */
+
+    html, body{
+      margin: 0;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-gallery{
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .flex-row img {
+      flex-shrink: 1;
+      flex-basis: 60%;
+    }
+
+    h2 {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      border-bottom: 2px solid #af0b0b ;
+      width: 50%;
+      margin: em .5em;
+      font-size: 1.8em;
+    }
+
+    h3{
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      color: #d95b5b ;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+    p{
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.2em;
+      line-height: 1.3em;
+      padding: 0 .4em;
+    }
+
+    .font-anton{
+      font-family: 'Anton', sans-serif;
+    }
+
+    .text-large {
+      font-size: 2em;
+      flex-shrink: 1;
+      text-align: center;
+      min-height: fit-content;
+      min-width: min-content;
+    }
+
+    .div-container {
+      background-color: #d95b5b;
+      flex-grow: 1;
+    }
+
+    .card{
+      margin: 20px;
+      
+    }
+
+    .card-title{
+      background-color: rgb(57, 65, 85);
+      margin: 0;
+      padding: .5em .5em;
+    }
+
+    .card img{
+      width: 100%;
+      margin: 0;
+      height: 350px;
+      object-fit: cover;
+
+    }
+
+    .card-text{
+      background-color: #EBEBEB;
+      margin: 0;
+      padding: 1em;
+    }
+
+    footer{
+      background-color: #353535;
+      color: white;
+      padding: .5em;
+    }
+
+    footer a{
+      color: white;
+    }
+
+    /* Start Your CSS Edits Here. */
+    @media all and (min-width: 700px)
+    {
+      .flex-gallery{
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .flex-container{
+        flex-direction: row;
+      }
+
+      .flex-container div{
+        flex-grow: 0;
+        flex-basis: 30%;
+      }
+
+      .flex-container img{
+        flex-grow: 1;
+      }
+
+      .columns{
+        display: flex;
+      }
+
+      .columns p{
+        padding: 1em;
+      }
+
+      h2{
+        padding-left: 1em;
+      }
+
+      .card{
+        flex-basis: 40%;
+      }
+    }
+
+    @media all and (min-width: 800px)
+    {
+      .card{
+        flex-basis: 45%;
+      }
+
+      .flex-container{
+        max-height: 435px;
+      }
+
+      .text-large{
+        font-size: 2.5em;
+      }
+
+      .flex-container img{
+        object-fit: cover;
+      }
+    }
+
+    @media all and (min-width: 900px)
+    {
+     .text-large{
+      font-size: 3em;
+     }
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="flex-container">
+    <img src="images/pexels-pixabay-208745.jpg" alt="">
+    <div class="div-container">
+      <p class="text-large font-anton">Welcome to San Francisco  </p>
+    </div>
+  </section>
+
+  <h2>History of the City</h2>
+  <section class="columns">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure architecto dolor beatae, ipsa magnam laborum
+      unde fuga tempora, officiis, libero soluta porro? Dolorem, voluptas!</p>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem ex distinctio incidunt dolor
+      aliquid obcaecati voluptate voluptatum suscipit minima?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus quaerat aperiam consectetur
+      obcaecati repellendus tenetur sed odit laudantium cum.</p>
+  </section>
+
+  <h2>Places to visit </h2>
+  <section class="flex-gallery">
+    <div class="card">
+      <h3 class="card-title">The Painted Ladies</h4>
+      <img src="images/pexels-belle-co-672916.jpg" alt=""> 
+      <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aperiam?</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Haight Ashbury</h4>
+      <img src="images/robin-jonathan-deutsch-VdTXM7tKj8w-unsplash.jpg" alt=""> 
+      <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aperiam?</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">The Mission</h4>
+      <img src="images/piermario-eva-s6lCKvD73D4-unsplash.jpg" alt=""> 
+      <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aperiam?</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title"> San Francisco Zoo </h4>
+      <img src="images/victoria-landavazo--OdpvGOejME-unsplash.jpg" alt=""> 
+      <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aperiam?</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Photo by Belle Co from Pexels</p>
+    <p>Photo by <a href="https://unsplash.com/@rodeutsch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Robin Jonathan Deutsch</a> on <a href="https://unsplash.com/s/photos/haight-ashbury?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+    <p>Photo by <a href="https://unsplash.com/@p1mm1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Piermario Eva</a> on <a href="https://unsplash.com/collections/73269011/mission-district-murales?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+    <p>Photo by <a href="https://unsplash.com/@victorialandavazo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Victoria Landavazo</a> on <a href="https://unsplash.com/s/photos/zoo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+  </footer>
+
+</body>
+
+</html

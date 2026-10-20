@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="html, training, lessons, templates">
+  <meta lang="en-US">
+  <title>4.2 Assignment Flexbox</title>
+  <style>
+  /*Pre-written CSS. You do not need to modify this code to complete the assigment.*/
+
+
+    /* An example of the @font-face rule, using a custom font provided by Amazon*/
+    /* Be sure to download the fonts folder along with the assignment file. */
+    @font-face{
+      font-family: "Amazon Ember";
+      src: url("fonts/Ember/Amazon-Ember-Medium.ttf") format("truetype");
+    }
+
+    @font-face{
+      font-family: "Amazon Ember Regular";
+      src: url("fonts/Ember/AmazonEmber_Rg.ttf") format("truetype");
+    }
+
+    @font-face{
+      font-family: "Amazon Ember Regular Light";
+      src: url("fonts/Ember/AmazonEmber_Rglt.ttf") format("truetype");
+    }
+
+    /* Set no margin on the body and html. */
+    body, html{
+      margin:0;
+    }
+    /* Using object-fit cover to prevent image distortion at different aspect ratios. */
+    /* Set a height of 300px for images, but this can be adjusted larger or smaller. */
+    img{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* The height and width of the star icon for product ratings */
+    .rating-icon{
+      width: 24px;
+      height:24px;
+    }
+
+    /* Basic styling for the site header section. */
+    header{
+      background-color: #131921;
+      color:white;
+      margin:0;
+    }
+
+    header h1 {
+      margin: 0;
+      padding: 5px 0px 5px 40px;
+      font-family: "Amazon Ember", "san serif";
+    }
+
+    /* Styling for the nav bar, and the navbar's unordered list. */
+    nav{
+      background-color: #232F3E;
+      font-family: "Amazon Ember Regular", "san serif";
+    }
+
+
+    .ul-vertical{
+      list-style-type: none;
+    }
+
+    .ul-vertical h4
+    {
+      margin: .25em;
+      list-style: none;
+    }
+
+    .ul-vertical li{
+      padding-left: 10px;
+      line-height: 1.4em;
+    }
+
+    .ul-h{
+      list-style: none;
+    }
+
+    .ul-h li {
+      padding: 10px;
+    }
+
+    /* Styling for the footer. */
+
+    footer{
+      padding: 10px;
+      background-color: #131921;
+      color:white;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    /* Styling for the product elements. */
+
+    .product-info{
+      border:2px solid black;
+      margin: 0;
+    }
+    .product-title{
+      text-align: center;
+      font-family: "Amazon Ember";
+    }
+
+    .product-detail{
+      background-color: #131921;
+      padding: 1em;
+      text-align: justify;
+      color: white;
+    }
+
+    /* The easy way of setting buy button the right corner is to make the product price element relative */
+    .product-price{
+      padding-left: 1em;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* Buy button is absolutely positioned to the right inside fo the product-price element. */
+    .buy-button{
+      text-align: end;
+      position: absolute;
+      right:20px;
+      padding: 5px 10px;
+      color: #FFF;
+      background-image: radial-gradient(rgb(0, 177, 0), rgb(4, 131, 11));
+      border: none;
+    }
+    
+
+  /* End of Pre-written CSS */
+
+    .flex-nowrap{
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .flex-container{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .flex-product{
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      flex: 1 1 30%;
+    }
+
+    .side-bar{
+      flex-shrink: 0;
+      flex-basis: 20%;
+      border-right: 2px solid #AAA;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Rainforest.com</h1>
+    <nav>
+      <ul class="ul-h">
+        <li>Best Sellers</li>
+        <li>Customer Service</li>
+        <li>Video</li>
+        <li>Books</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex-nowrap">
+    <div class="side-bar">
+      <ul class="ul-vertical flex-nowrap">
+        <h4>Department</h4>
+        <li>Home Goods</li>
+        <li>Electronics</li>
+        <li>Fashion</li>
+        <li>Sports</li>
+      </ul>
+
+      <ul class="ul-vertical">
+        <h4>Customer Rating</h4>
+        <li>
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+        </li>
+        <li>
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+        </li>
+        <li>
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+        </li>
+        <li>
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+        </li>
+        <li>
+          <img class="rating-icon" src="images/a-star-full.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+          <img class="rating-icon" src="images/a-star-empty.png" alt="">
+        </li>
+      </ul>
+    </div>
+    <div id="flexbox-container-for-all-products" class="flex-container">
+      <div class="flex-product">
+        <img src="images/rachit-tank-2cFZ_FB08UM-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Modern Watch</h1>
+          <p class="product-detail">A Styling, Modern Watch.</p>
+          <p class="product-price">$59.99 <button class="buy-button">Buy Now</button></p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/revolt-164_6wVEHfI-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Red Sports Shoes </h1>
+          <p class="product-detail">Exciting Red Running Shoes.</p>
+          <p class="product-price">$99.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/ryan-hoffman-Kf6UgCx5mb8-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Water Bottle</h1>
+          <p class="product-detail">Quench your thirst with this durable water bottle.</p>
+          <p class="product-price">$39.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/tamara-bellis-y6CbTYPjY3Y-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Luxury Purse</h1>
+          <p class="product-detail">Sleeky Luxury. Black</p>
+          <p class="product-price">$149.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/c-d-x-PDX_a_82obo-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Deluxe Headphones</h1>
+          <p class="product-detail">Incredible Sound!</p>
+          <p class="product-price">$69.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+
+      </div>
+
+      <div class="flex-product">
+        <img src="images/alex-motoc-0POwK6iAiRQ-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Game Controller</h1>
+          <p class="product-detail">For the ultimate gaming experice</p>
+          <p class="product-price">$39.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/charles-deluvio-1-nx1QR5dTE-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Beach Sunglasses</h1>
+          <p class="product-detail">Enjoy the beach with these sunglasses.</p>
+          <p class="product-price">$29.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/ian-bevis-IJjfPInzmdk-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Running Shoes</h1>
+          <p class="product-detail">Athletic Running Shoes.</p>
+          <p class="product-price">$79.99 <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+      <div class="flex-product">
+        <img src="images/felipepelaquim-6zO5VKogoZE-unsplash.jpg" alt="">
+        <div class="product-info">
+          <h1 class="product-title">Men's Tennis Shoes</h1>
+          <p class="product-detail">Perfect for a game of tennis.</p>
+          <p class="product-price">$69.99  <button class="buy-button">Buy Now</button> </p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <pre>
+      Photo by <a href="https://unsplash.com/@rachitank?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rachit Tank</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      Photo by <a href="https://unsplash.com/@cdx2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">C D-X</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Charles Deluvio</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+      Photo by <a href="https://unsplash.com/@chameleonwebservices?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Bevis</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      Photo by <a href="https://unsplash.com/@alexmotoc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Motoc</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      Photo by <a href="https://unsplash.com/@tamarabellis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tamara Bellis</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+      Photo by <a href="https://unsplash.com/@revolt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">REVOLT</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      Photo by <a href="https://unsplash.com/@ryanhoffman007?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ryan Hoffman</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      Photo by <a href="https://unsplash.com/@felipepelaquim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">felipepelaquim</a> on <a href="https://unsplash.com/s/photos/product?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+    </pre>
+  </footer>
+</body>
+
+
+</html

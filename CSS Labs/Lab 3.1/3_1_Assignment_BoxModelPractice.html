@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, training, lessons, templates">
+    <meta lang="en-US">    
+    <title>3_1 Lab: Module 3: Box Model</title>
+    <style>
+
+        /* *** START: Updates needed. See lab instructions. *** */
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+    
+        html {
+            box-sizing: border-box;
+        }
+
+        /* *** END: Updates needed. See lab instructions. *** */
+    
+        /* *** START: No changes needed. *** */
+
+        html, body {
+            margin: 0;
+            /* Clear inherited margin. */
+            padding: 0;
+            /* Clear inherited padding. */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.0em;
+            background-color: rgb(12, 12, 12);
+            color: rgb(151, 151, 151);
+        }
+    
+        /* Clear inherited element styles. */
+        h1, h2, div, ul, label, img, li {
+            margin: 0;
+            padding: 0;
+        }
+    
+        h1 {
+            padding-top: 1.2em;
+        }
+    
+        h2 {
+            padding-top: 1.0em;
+            padding-bottom: 0.5em;
+        }
+    
+        input, textarea {
+            width: 100%;
+            color: rgb(0, 0, 0);
+            border-radius: 3px;
+            font-size: inherit;
+            padding: 5px 5px 5px 10px;
+            margin: 5px;
+            background-color: rgba(255, 255, 255, .7);
+            border: none;
+        }
+    
+        input {
+            height: 34px;
+        }
+    
+        textarea {
+            columns: 40;
+            height: 120px !important;
+            resize: none;
+            font-family: inherit;
+        }
+    
+        textarea:focus, input:focus {
+            color: rgb(0, 0, 0);
+            background-color: rgb(144, 211, 238);
+        }
+    
+        /* *** END: No changes needed. *** */
+
+        /* *** START: Updates needed. See lab instructions. *** */        
+
+        .outer {
+            width: 900px;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2.1em;
+        }
+    
+        .mainimg {
+           width: 100%; 
+        }
+    
+        /* *** END: Updates needed. See lab instructions. *** */
+
+        /* *** START: No changes needed. *** */
+
+        .button1 {
+            height: 40px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 9, 90);
+            border: none;
+            outline: black;
+            margin: 6px;
+            margin-top: 10px;
+            width: 100%;
+            text-align: middle;
+        }
+    
+        .rounded {
+            border-radius: 8px;
+            padding: 0.5em;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+    
+        .rounded:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(2, 49, 94);
+        }
+    
+        /* *** END: No changes needed. *** */
+
+        /* *** START: Updates needed. See lab instructions. *** */
+
+        .col1 {
+            width: 100px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    
+        .col2 {
+            width: 650px;
+            height: 100%;
+            display: inline-block;
+        }
+    
+        .comment {
+            padding: 1.2em;
+            margin: 0.5em;
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .answer {
+            border: 8px solid green;
+            background-color: rgb(22, 41, 22);
+        }
+    
+        .standard {
+            border: 1px solid rgb(158, 158, 158);
+            background-color: rgb(29, 36, 46);
+        }
+    
+        .flagged {
+            border: 1px solid rgb(104, 102, 2);
+            background-color: rgb(41, 46, 27);
+        }
+
+        /* *** END: Updates needed. See lab instructions. *** */
+    
+        /* *** START: No changes needed. *** */
+
+        .avatar {
+            padding: 8px;
+            vertical-align: middle;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2em;
+        }
+    
+        .blueviolet {
+            background-color: blueviolet;
+        }
+    
+        .redorange {
+            background-color: rgb(226, 70, 43);
+        }
+    
+        .pink {
+            background-color: rgb(221, 4, 123);
+        }
+    
+        .postuseroralias_display {
+            font-weight: bold;
+        }
+    
+        .postdate_display {
+            font-size: .9em;
+        }
+    
+        .postmsg_display {
+            padding-top: 1.0em;
+        }
+
+        /* *** END: No changes needed. *** */
+
+    </style>
+</head>
+
+<body>
+
+<div class="outer">
+    <div>
+        <h1>Modern Day Gladiators</h1>
+        <p>By <strong>Sara Smith</strong> | July 22, 2021</p>
+        <br/>
+        <img class="mainimg" src='images/pexels-coco-championship-598631.jpg';/>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim adipisci explicabo exercitationem saepe asperiores possimus sunt at! Architecto, quod. Fugiat! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim adipisci explicabo exercitationem saepe asperiores possimus sunt at! Architecto, quod. Fugiat!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim adipisci explicabo exercitationem saepe asperiores possimus sunt at! Architecto, quod. Fugiat!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, accusantium omnis. Debitis est et voluptatem quos consectetur. Numquam, deleniti sint! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim adipisci explicabo exercitationem saepe asperiores possimus sunt at! Architecto, quod. Fugiat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui doloremque sint ipsum ab nulla consequatur inventore dolor molestias eaque eveniet? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim adipisci explicabo exercitationem saepe asperiores possimus sunt at! Architecto, quod. Fugiat!</p>
+    </div>
+    <h2>Join to Discussion</h2>
+    <div class="post">
+        <form action="">
+            <input name="useroralias" type="text" placeholder="your name" />
+            <textarea name="postmsg" placeholder="your message"></textarea>        
+            <input name="post" type="submit" class="button1 rounded" value="Post" />
+        </form>  
+    </div>
+
+    <div class="comment answer">
+        <div class="col1">
+            <div class="avatar blueviolet">P</div>        
+        </div>
+        <div class="col2">
+            <div class="postuseroralias_display">Paul W.</div>
+            <div class="postdate_display">7/26/21 1:00 AM</div>
+            <div class="postmsg_display">Great article! These fighters give so much to the sport.</div>
+        </div>
+    </div>
+
+    <div class="comment standard">
+        <div class="col1">
+            <div class="avatar redorange">J</div>        
+        </div>
+        <div class="col2">
+            <div class="postuseroralias_display">Jack S</div>
+            <div class="postdate_display">7/27/21 7:00 PM</div>
+            <div class="postmsg_display">I couldn't take one kick from these guys.</div>
+        </div>
+    </div>
+    
+    <div class="comment flagged">
+        <div class="col1">
+            <div class="avatar pink">K</div>        
+        </div>
+        <div class="col2">
+            <div class="postuseroralias_display">Karla J</div>
+            <div class="postdate_display">7/27/21 8:15 PM</div>
+            <div class="postmsg_display">We have more fun at www.myfakesite.com.</div>
+        </div>
+    </div>
+</div> 
+    
+</body>
+
+</html>

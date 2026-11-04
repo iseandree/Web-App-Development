@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="html, training, lessons, templates">
+  <meta lang="en-US">
+  <title>Assignment 4_2 ClipPath</title>
+
+  <style>
+    /* Starting CSS. Does NOT Need to be modifed. */
+    .img-size{
+      width: 386px;
+      height: 583px;
+    }
+
+    .flex-row{
+      display: flex;
+      flex-direction: row;
+    }
+
+    figure{
+      text-align: center;
+    }
+
+    footer
+    {
+      background-color: black;
+      color: white;
+    }
+
+    footer a{
+      color: inherit;
+    }
+
+    /*Start your Custom CSS Here  */
+    .shape{
+      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    }
+
+    .shape2{
+      clip-path: polygon(0% 37%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .shape3{
+      clip-path: polygon(0 37%, 100% 0, 100% 59%, 0% 100%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Assignment 4_2 ClipPath</h1>
+
+  <div class="flex-row">
+    <figure class="center">
+      <img class="img-size shape" src="photos/pexels-david-selbert-6467928.jpg" alt="">
+    </figure>
+  
+    <figure >
+      <img class="img-size shape2"  src="photos/pexels-yaroslav-shuraev-8091469.jpg" alt="">
+    </figure>
+  
+    <figure>
+      <img class="img-size shape3" src="photos/billow926-zUBtcY35q9U-unsplash.jpg" alt="">
+    </figure>
+  </div>
+
+
+
+
+  <footer>
+    <p>Photo by David Selbert from Pexels</p>
+    <p>Photo by <a href="https://unsplash.com/@billow926?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">billow926</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+    <p>Photo by Yaroslav Shuraev from Pexels</p>
+  </footer>
+
+</body>
